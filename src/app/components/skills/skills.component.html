@@ -1,0 +1,22 @@
+<div class="skills-wrap">
+  <span class="section-tag">Skills</span>
+  <h2 class="section-title">Tools and disciplines I work with</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card" *ngFor="let group of skillGroups">
+      <div class="skill-head">
+        <i [class]="group.icon" [style.color]="group.color"></i>
+        <h3>{{ group.category }}</h3>
+      </div>
+      <div class="skill-item" *ngFor="let s of group.skills">
+        <div class="skill-row">
+          <span>{{ s.name }}</span>
+          <span class="skill-pct">{{ s.level }}%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" [style.width.%]="s.level" [style.background]="group.color"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

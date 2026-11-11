@@ -1,0 +1,37 @@
+<div class="about-wrap">
+  <span class="section-tag">About Me</span>
+  <h2 class="section-title">Engineering light into precision systems</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="about-para">
+        I'm an Electro-Optics Engineer based in <strong>Abu Dhabi, UAE</strong>, with over 7 years of
+        hands-on experience designing, testing and qualifying opto-electronic and photonic systems
+        for defense and industrial applications.
+      </p>
+      <p class="about-para">
+        At Halcon Systems LLC, I work across the full stack of electro-optic development — from
+        PCB schematic design and Interface Control Document (ICD) analysis to fiber-optic assembly,
+        laser testing, and seeker system qualification for guided weapon platforms. I've supported
+        live field trials, calibrated laboratory instrumentation, and delivered technical evaluations
+        that directly informed procurement decisions.
+      </p>
+      <p class="about-para">
+        My foundation is in photonics engineering — a 5-year integrated MSc from the International
+        School of Photonics at CUSAT — where I built solid-state lasers and wavelength-division
+        multiplexing systems from first principles. I bring that same rigor to every optical and
+        electronic system I design today.
+      </p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-card" *ngFor="let h of highlights">
+        <i [class]="h.icon"></i>
+        <div>
+          <span class="h-label">{{ h.label }}</span>
+          <span class="h-value">{{ h.value }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

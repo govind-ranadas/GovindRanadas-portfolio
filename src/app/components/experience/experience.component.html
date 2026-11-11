@@ -1,0 +1,35 @@
+<div class="exp-wrap">
+  <span class="section-tag">Experience</span>
+  <h2 class="section-title">Where I've built my craft</h2>
+
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let exp of experiences">
+      <div class="timeline-dot" [class.current]="exp.current"></div>
+      <div class="timeline-card">
+        <div class="exp-top">
+          <div>
+            <h3>{{ exp.role }}</h3>
+            <span class="exp-company">{{ exp.company }} · {{ exp.type }}</span>
+          </div>
+          <span class="exp-period" *ngIf="exp.current">Current</span>
+        </div>
+        <div class="exp-meta"><i class="fas fa-calendar"></i> {{ exp.period }} &nbsp; <i class="fas fa-location-dot"></i> {{ exp.location }}</div>
+        <ul class="exp-points">
+          <li *ngFor="let p of exp.points">{{ p }}</li>
+        </ul>
+        <div class="exp-tags">
+          <span *ngFor="let t of exp.tags">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="edu-title">Education</h3>
+  <div class="edu-card" *ngFor="let e of education">
+    <i class="fas fa-graduation-cap"></i>
+    <div>
+      <strong>{{ e.degree }}</strong>
+      <span>{{ e.institution }} · {{ e.period }} · {{ e.location }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="hero-wrap">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="badge"><span class="dot"></span> Available for opportunities</div>
+      <h1 class="hero-name">Govind<br><span class="name-accent">Ranadas</span></h1>
+      <h2 class="hero-role">Electro-Optics Engineer</h2>
+      <p class="hero-bio">
+        Electro-Optics & Photonics Engineer with <strong>7+ years</strong> of experience in
+        optical system design, fiber-optic testing, PCB layout, and seeker system qualification
+        for defense and opto-mechatronic platforms. Skilled in Zemax, Lumerical, Altium and
+        precision optical metrology.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" (click)="scrollTo('#projects')">View My Work <i class="fas fa-arrow-right"></i></button>
+        <button class="btn btn-outline" (click)="scrollTo('#contact')">Let's Talk</button>
+      </div>
+      <div class="hero-socials">
+        <a *ngFor="let s of socials" [href]="s.url" target="_blank" [attr.aria-label]="s.label"><i [class]="s.icon"></i></a>
+        <span class="connect-label">CONNECT</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-ring">
+        <img src="assets/profile.jpg" alt="Govind Ranadas">
+      </div>
+      <div class="float-chip chip-top"><i class="fas fa-microchip"></i>Electro-Optics Engineer</div>
+      <div class="float-chip chip-bottom"><span class="chip-num">7+</span><span>Years Exp.</span></div>
+    </div>
+  </div>
+</div>

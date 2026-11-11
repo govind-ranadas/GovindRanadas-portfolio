@@ -1,0 +1,15 @@
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; }
+.about-para { color: var(--text-dim); margin-bottom: 20px; }
+.about-highlights { display: flex; flex-direction: column; gap: 14px; }
+.highlight-card {
+  display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 18px;
+}
+.highlight-card i { font-size: 1.1rem; color: var(--accent); width: 24px; text-align: center; }
+.highlight-card div { display: flex; flex-direction: column; }
+.h-label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+.h-value { font-weight: 600; }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}

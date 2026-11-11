@@ -1,0 +1,15 @@
+<div class="proj-wrap">
+  <span class="section-tag">Projects</span>
+  <h2 class="section-title">Selected work</h2>
+
+  <div class="proj-grid">
+    <div class="proj-card" *ngFor="let p of projects">
+      <span class="proj-tag">{{ p.tag }}</span>
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description }}</p>
+      <div class="proj-tech">
+        <span *ngFor="let t of p.tech">{{ t }}</span>
+      </div>
+    </div>
+  </div>
+</div>

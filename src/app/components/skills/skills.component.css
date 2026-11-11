@@ -1,0 +1,14 @@
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
+.skill-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.skill-head i { font-size: 1.3rem; }
+.skill-head h3 { font-size: 1.1rem; }
+.skill-item { margin-bottom: 16px; }
+.skill-item:last-child { margin-bottom: 0; }
+.skill-row { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 6px; color: var(--text-dim); }
+.skill-bar { height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+.skill-fill { height: 100%; border-radius: 999px; }
+
+@media (max-width: 860px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}

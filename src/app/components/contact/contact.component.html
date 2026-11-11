@@ -1,0 +1,43 @@
+<div class="contact-wrap">
+  <div class="contact-left">
+    <span class="section-tag">Contact</span>
+    <h2 class="section-title">Let's talk about your next system</h2>
+    <p class="contact-intro">
+      I'm currently open to new opportunities — whether it's a full-time role, a project
+      collaboration, or a technical conversation about optics and electronics. Based in Abu Dhabi,
+      available for on-site or remote work.
+    </p>
+
+    <div class="contact-card" *ngFor="let c of contactInfo">
+      <div class="c-icon" [style.background]="c.accent + '22'" [style.color]="c.accent"><i [class]="c.icon"></i></div>
+      <div>
+        <span class="c-label">{{ c.label }}</span>
+        <a [href]="c.href" target="_blank" class="c-value">{{ c.value }}</a>
+      </div>
+    </div>
+
+    <div class="follow-row">
+      <span class="follow-label">FOLLOW ME</span>
+      <div class="follow-links">
+        <a *ngFor="let s of socials" [href]="s.url" target="_blank"><i [class]="s.icon"></i> {{ s.label }}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <div class="avail-card">
+      <span class="avail-dot"></span>
+      <h3>Available Now</h3>
+      <p>Open to Electro-Optics / Opto-Electronics Engineer roles in the UAE or remote positions in the defense and photonics space.</p>
+      <div class="avail-tags">
+        <span>Full-time</span><span>Remote</span><span>UAE-based</span><span>Defense / Photonics</span>
+      </div>
+      <a href="mailto:govind.ranadas@outlook.com" class="btn btn-primary full"><i class="fas fa-paper-plane"></i> Send me an email</a>
+      <a href="https://wa.me/971506758258" target="_blank" class="btn btn-outline full"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Designed & Built by <strong>Govind Ranadas</strong> · 2026</p>
+</footer>

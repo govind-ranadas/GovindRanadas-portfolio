@@ -1,0 +1,21 @@
+.timeline { position: relative; padding-left: 28px; border-left: 2px solid var(--border); margin-bottom: 50px; }
+.timeline-item { position: relative; margin-bottom: 36px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot { position: absolute; left: -35px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--text-dim); }
+.timeline-dot.current { background: var(--accent); box-shadow: 0 0 0 4px rgba(255,157,61,0.2); }
+.timeline-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; }
+.exp-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.exp-top h3 { font-size: 1.15rem; }
+.exp-company { color: var(--text-dim); font-size: 0.9rem; }
+.exp-period { background: rgba(255,157,61,0.12); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+.exp-meta { color: var(--text-dim); font-size: 0.85rem; margin: 10px 0 14px; }
+.exp-points { padding-left: 18px; color: var(--text-dim); font-size: 0.92rem; margin-bottom: 16px; }
+.exp-points li { margin-bottom: 6px; }
+.exp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.exp-tags span { background: rgba(34,211,238,0.08); color: var(--accent-2); padding: 4px 12px; border-radius: 999px; font-size: 0.78rem; }
+
+.edu-title { font-size: 1.3rem; margin-bottom: 16px; }
+.edu-card { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.edu-card i { color: var(--accent); font-size: 1.3rem; margin-top: 2px; }
+.edu-card div { display: flex; flex-direction: column; gap: 4px; }
+.edu-card span { color: var(--text-dim); font-size: 0.9rem; }
