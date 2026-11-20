@@ -6,7 +6,8 @@
   --text: #eef2f8;
   --text-dim: #93a1b8;
   --accent: #ff9d3d;
-  --accent-2: #22d3ee;
+  /* --accent-2: #22d3ee; */
+    --accent-2: #00d4ff;
   --font-head: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
