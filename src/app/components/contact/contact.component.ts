@@ -33,7 +33,8 @@ export class ContactComponent {
     }
   ];
 
-  socials = [
-    { icon: 'fab fa-linkedin', url: 'https://linkedin.com', label: 'LinkedIn', color: '#0A66C2' },
-  ];
+socials = [
+  { icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/govind-ranadas-7333a816a', label: 'LinkedIn', color: '#0A66C2' },
+  { icon: 'fab fa-github',   url: 'https://github.com/govind-ranadas', label: 'GitHub',   color: '#ffffff' },
+];
 }

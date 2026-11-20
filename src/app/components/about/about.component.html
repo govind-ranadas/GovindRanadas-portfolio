@@ -1,30 +1,63 @@
 <div class="about-wrap">
-  <span class="section-tag">About Me</span>
-  <h2 class="section-title">Engineering light into precision systems</h2>
+  <div class="about-top">
 
-  <div class="about-grid">
-    <div class="about-text">
-      <p class="about-para">
-        I'm an Electro-Optics Engineer based in <strong>Abu Dhabi, UAE</strong>, with over 7 years of
-        hands-on experience designing, testing and qualifying opto-electronic and photonic systems
-        for defense and industrial applications.
-      </p>
-      <p class="about-para">
-        At HALCON Systems, I contribute to various aspects of electro-optical system development, integration, and testing, including seeker development, system testing and validation, PCB schematic design, and the preparation and analysis of Interface Control Documents (ICDs). My experience also encompasses fibre-optic splicing, optical metrology, and electro-optical laboratory instrument calibration. Additionally, I have supported live field trials and contributed to procurement-related activities, gaining valuable hands-on experience across both laboratory and field environments.
-      </p>
-      <p class="about-para">
-My foundation in electro-optics engineering comes from a five-year Integrated MSc programme at the International School of Photonics, CUSAT, where I gained academic and project-based exposure to diode-pumped solid-state lasers and wavelength-division multiplexing (WDM). I further developed my expertise in optical system design and engineering through my Graduate Engineer role, building practical knowledge in optical and electronic system development. I bring this combination of strong academic fundamentals, hands-on engineering experience, and technical rigour to every system I work on.
-      </p>
-    </div>
-
-    <div class="about-highlights">
-      <div class="highlight-card" *ngFor="let h of highlights">
-        <i [class]="h.icon"></i>
-        <div>
-          <span class="h-label">{{ h.label }}</span>
-          <span class="h-value">{{ h.value }}</span>
+    <div class="about-photo-col">
+      <div class="photo-frame">
+        <span class="frame-dot"></span>
+        <div class="about-photo">
+          <img src="assets/profile.png" alt="Govind Ranadas">
         </div>
+        <span class="frame-dot frame-dot-br"></span>
       </div>
     </div>
+
+    <div class="about-text">
+      <span class="section-tag"><span class="tag-line"></span>About Me</span>
+      <h2 class="section-title">
+        Engineering light into<br>
+        <span class="title-accent">precision systems</span>
+      </h2>
+
+      <p class="about-para">
+        I'm an Electro-Optics Engineer based in <strong>Abu Dhabi, UAE</strong>, with over
+        <strong>7 years</strong> of hands-on experience designing, testing and qualifying
+        opto-electronic and photonic systems for defense and industrial applications.
+      </p>
+      <p class="about-para">
+        At <strong>HALCON Systems</strong>, I contribute to various aspects of electro-optical system
+        development, integration, and testing, including seeker development, system testing and
+        validation, <strong>PCB schematic design</strong>, and the preparation and analysis of
+        <strong>Interface Control Documents (ICDs)</strong>. My experience also encompasses
+        <strong>fibre-optic splicing</strong>, optical metrology, and electro-optical laboratory
+        instrument calibration. Additionally, I have supported live field trials and contributed to
+        procurement-related activities, gaining valuable hands-on experience across both laboratory
+        and field environments.
+      </p>
+      <p class="about-para">
+        My foundation in electro-optics engineering comes from a five-year Integrated MSc programme at
+        the <strong>International School of Photonics, CUSAT</strong>, where I gained academic and
+        project-based exposure to <strong>diode-pumped solid-state lasers</strong> and
+        <strong>wavelength-division multiplexing (WDM)</strong>. I further developed my expertise in
+        optical system design and engineering through my Graduate Engineer role, building practical
+        knowledge in optical and electronic system development. I bring this combination of strong
+        academic fundamentals, hands-on engineering experience, and technical rigour to every system
+        I work on.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight-card" *ngFor="let h of highlights">
+          <i [class]="h.icon"></i>
+          <div>
+            <span class="h-label">{{ h.label }}</span>
+            <span class="h-value">{{ h.value }}</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-primary about-cta" href="assets/Govind_Ranadas_Resume.pdf" download>
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+
   </div>
 </div>

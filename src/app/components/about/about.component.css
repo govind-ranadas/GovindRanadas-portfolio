@@ -1,15 +1,127 @@
-.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; }
-.about-para { color: var(--text-dim); margin-bottom: 20px; }
-.about-highlights { display: flex; flex-direction: column; gap: 14px; }
-.highlight-card {
-  display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border);
-  border-radius: 10px; padding: 16px 18px;
+/* Full-width band that works even when the parent is a narrow container */
+:host {
+  display: block;
+  position: relative;
+  padding: 90px 0;
+  isolation: isolate;
 }
-.highlight-card i { font-size: 1.1rem; color: var(--accent); width: 24px; text-align: center; }
-.highlight-card div { display: flex; flex-direction: column; }
-.h-label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
-.h-value { font-weight: 600; }
+:host::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  z-index: -1;
+}
 
-@media (max-width: 900px) {
-  .about-grid { grid-template-columns: 1fr; }
+.about-wrap { width: 100%; }
+
+/* ---------- Layout ---------- */
+.about-top {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ---------- Photo ---------- */
+.photo-frame { position: relative; width: 340px; padding: 8px; }
+.photo-frame::before {
+  content: "";
+  position: absolute; inset: 0;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 157, 61, 0.08);
+}
+.frame-dot {
+  position: absolute; top: -4px; left: -4px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  z-index: 2;
+}
+.frame-dot-br { top: auto; left: auto; bottom: -4px; right: -4px; }
+.about-photo {
+  position: relative;
+  width: 100%; aspect-ratio: 4 / 5;
+  border-radius: 14px; overflow: hidden;
+}
+.about-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top; display: block;
+}
+
+/* ---------- Heading ---------- */
+.section-tag {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.tag-line { width: 40px; height: 1px; background: var(--accent); display: block; }
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+.title-accent { color: var(--accent); }
+
+/* ---------- Text ---------- */
+.about-para {
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+.about-para strong { color: var(--text); font-weight: 600; }
+
+/* ---------- Highlights (2 columns, inside text column) ---------- */
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 32px 0 32px;
+}
+.highlight-card {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  min-width: 0;
+  transition: 0.25s;
+}
+.highlight-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.highlight-card i { font-size: 1.1rem; color: var(--accent); width: 24px; text-align: center; flex-shrink: 0; }
+.highlight-card div { display: flex; flex-direction: column; min-width: 0; }
+.h-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+.h-value { font-weight: 600; overflow-wrap: anywhere; }
+
+.about-cta { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+
+/* ---------- Laptop ---------- */
+@media (max-width: 1100px) {
+  .about-top { grid-template-columns: 280px 1fr; gap: 48px; }
+  .photo-frame { width: 280px; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 860px) {
+  :host { padding: 64px 0; }
+  .about-top { grid-template-columns: 1fr; gap: 40px; }
+  .photo-frame { margin: 0 auto; width: min(320px, 100%); }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 560px) {
+  :host { padding: 48px 0; }
+  .about-para { font-size: 0.95rem; line-height: 1.7; }
+  .about-highlights { grid-template-columns: 1fr; margin: 24px 0; }
+  .about-cta { width: 100%; justify-content: center; }
 }

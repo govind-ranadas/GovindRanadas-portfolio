@@ -1,20 +1,33 @@
 <div class="hero-wrap">
   <div class="hero-grid"></div>
+
   <div class="hero-content">
     <div class="hero-text">
       <div class="badge"><span class="dot"></span> Available for opportunities</div>
-      <h1 class="hero-name">Govind<br><span class="name-accent">Ranadas</span></h1>
-      <h2 class="hero-role">Electro-Optics Engineer</h2>
+
+      <h1 class="hero-name">Govind <span class="name-accent">Ranadas</span></h1>
+<h2 class="hero-role"><span>{{ typedText }}</span><span class="cursor"></span></h2>
+
       <p class="hero-bio">
         Photonics graduate with <strong>7+ years</strong> of experience in
-        electro-optics engineering.Skilled in electro-optical system testing and qualification,optical system design, PCB design, optical metrology, and fibre splicing,with hands-on experience in industry-standard engineering and simulation tools such as Zemax OpticStudio, Altium Designer,Ansys Lumerical, and OptiSystem.
+        electro-optics engineering. Skilled in electro-optical system testing and
+        qualification, optical system design, PCB design, optical metrology, and
+        fibre splicing, with hands-on experience in industry-standard engineering
+        and simulation tools such as Zemax OpticStudio, Altium Designer,
+        Ansys Lumerical, and OptiSystem.
       </p>
+
       <div class="hero-actions">
-        <button class="btn btn-primary" (click)="scrollTo('#projects')">View My Work <i class="fas fa-arrow-right"></i></button>
+        <button class="btn btn-primary" (click)="scrollTo('#projects')">
+          View My Work <i class="fas fa-arrow-right"></i>
+        </button>
         <button class="btn btn-outline" (click)="scrollTo('#contact')">Let's Talk</button>
       </div>
+
       <div class="hero-socials">
-        <a *ngFor="let s of socials" [href]="s.url" target="_blank" [attr.aria-label]="s.label"><i [class]="s.icon"></i></a>
+        <a *ngFor="let s of socials" [href]="s.url" target="_blank" [attr.aria-label]="s.label">
+          <i [class]="s.icon"></i>
+        </a>
         <span class="connect-label">CONNECT</span>
       </div>
     </div>
@@ -25,6 +38,13 @@
       </div>
       <div class="float-chip chip-top"><i class="fas fa-microchip"></i>Electro-Optics Engineer</div>
       <div class="float-chip chip-bottom"><span class="chip-num">7+</span><span>Years Exp.</span></div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item" *ngFor="let s of stats">
+      <span class="stat-num">{{ s.num }}</span>
+      <span class="stat-label">{{ s.label }}</span>
     </div>
   </div>
 </div>

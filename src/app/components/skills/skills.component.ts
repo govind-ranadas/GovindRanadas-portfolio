@@ -11,36 +11,40 @@ import { CommonModule } from '@angular/common';
 export class SkillsComponent {
   skillGroups = [
     {
-      category: 'Optical & Photonics Design',
+      category: 'Design and Simulation Tools',
       icon: 'fas fa-eye',
       color: '#ff9d3d',
       skills: [
-        { name: 'Zemax', level: 88 },
-        { name: 'Lumerical FDTD', level: 85 },
-        { name: 'OptiSystem / Optiwave', level: 85 },
-        { name: 'Optical System Design & Analysis', level: 90 },
+        { name: 'Zemax Optical Studio', level: 80 },
+        { name: 'Altium Desinger', level: 90 },
+        { name: 'Optisystem design software', level: 75 },
+        { name: 'LT spice', level: 80 },
+        { name: 'Lumerical FDTD', level: 75 },
+
       ]
     },
     {
-      category: 'Electronics & PCB',
+      category: 'Instrumentation',
       icon: 'fas fa-microchip',
       color: '#22d3ee',
       skills: [
-        { name: 'Altium Designer', level: 85 },
-        { name: 'LTSpice', level: 80 },
-        { name: 'PCB Layout & Schematic Design', level: 88 },
-        { name: 'ICD Analysis & Documentation', level: 85 },
+        { name: 'Optical Spectrometer', level: 90 },
+        { name: 'Laser Sources', level: 90 },
+        { name: 'Optical Power & Energy Meters', level: 90 },
+        { name: 'Digital Oscilloscope', level: 75 },
+       { name: 'SWIR & MWIR Imaging Cameras', level: 80 },
+
       ]
     },
     {
-      category: 'Testing & Qualification',
+      category: 'Tools & Equipment',
       icon: 'fas fa-flask',
       color: '#ff9d3d',
       skills: [
-        { name: 'Fiber-Optic Splicing & Testing', level: 90 },
-        { name: 'Seeker System Qualification', level: 88 },
-        { name: 'Laboratory Instrument Calibration', level: 85 },
-        { name: 'On-Field Trial Support', level: 85 },
+        { name: 'Fiber-Optic Fusion Splicer', level: 80 },
+        { name: 'Precision Fiber-Optic Cleaver', level: 80 },
+        { name: 'Precision Crimping', level: 80 },
+        { name: 'Electronics Soldering Station', level: 70 },
       ]
     },
     {
@@ -49,8 +53,8 @@ export class SkillsComponent {
       color: '#22d3ee',
       skills: [
         { name: 'Python', level: 75 },
-        { name: 'Configuration Management', level: 80 },
-        { name: 'Technical Reporting', level: 88 },
+        { name: 'LASER', level: 80 },
+        { name: 'Spectrometer', level: 95 },
         { name: 'MS Office Suite', level: 85 },
       ]
     }
